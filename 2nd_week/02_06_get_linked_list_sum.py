@@ -14,22 +14,22 @@ class LinkedList:
             cur = cur.next
         cur.next = Node(value)
 
+def get_single_linked_list_sum(linked_list):
+    sum = 0
+    cur = linked_list.head
+
+    while cur is not None:
+        sum = sum * 10 + cur.data
+        cur = cur.next
+
+    return sum
+
 
 def get_linked_list_sum(linked_list_1, linked_list_2):
-    result1 = 0
-    result2 = 0
-    cur1 = linked_list_1.head
-    cur2 = linked_list_2.head
+     # 중복되는 코드는 불편해야 한다
+     # get_single_linked_list_sum 함수로 추출해 중복을 제거해보자
+     return get_single_linked_list_sum(linked_list_1) + get_single_linked_list_sum(linked_list_2)
 
-    while cur1 is not None:
-        result1  = result1 * 10 + cur1.data
-        cur1 = cur1.next
-
-    while cur2 is not None:
-        result2  = result2 * 10 + cur2.data
-        cur2 = cur2.next
-
-    return int(result1) + int(result2)
 
 
 linked_list_1 = LinkedList(6)
