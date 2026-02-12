@@ -16,17 +16,17 @@ class LinkedList:
 
 
 def get_linked_list_sum(linked_list_1, linked_list_2):
-    result1 = ''
-    result2 = ''
+    result1 = 0
+    result2 = 0
     cur1 = linked_list_1.head
     cur2 = linked_list_2.head
 
     while cur1 is not None:
-        result1 += str(cur1.data)
+        result1  = result1 * 10 + cur1.data
         cur1 = cur1.next
 
     while cur2 is not None:
-        result2 += str(cur2.data)
+        result2  = result2 * 10 + cur2.data
         cur2 = cur2.next
 
     return int(result1) + int(result2)
