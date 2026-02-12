@@ -4,8 +4,13 @@ finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
 
 def is_existing_target_number_sequential(target, array):
+    # 순차 탐색, 이진 탐색 중 누가 얼마나 더 효율적인지 알아보기 위해 find_count 변수로 알아보자
+    find_count = 0
+
     for number in array:
+        find_count += 1
         if target == number:
+            print(find_count)
             return True
 
     return False
