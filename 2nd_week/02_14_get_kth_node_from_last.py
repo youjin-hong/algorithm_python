@@ -43,7 +43,7 @@ class LinkedList:
             slow = slow.next
             fast = fast.next
 
-        return self.head
+        return slow
 
 
     # 내 풀이 - 틀린 풀이
