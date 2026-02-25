@@ -1,5 +1,6 @@
 input = [4, 6, 2, 9, 1]
 
+# bubble 정렬은 시간 복잡도 O(N^2)
 def bubble_sort(array):
     n = len(array)
 
