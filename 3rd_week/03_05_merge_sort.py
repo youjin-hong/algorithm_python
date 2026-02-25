@@ -22,10 +22,10 @@ def merge(array1, array2):
     array2_index = 0
 
     while array1_index < len(array1) and array2_index < len(array2):
-        if array1[array1_index] < array2[array2_index]:
+        if array1[array1_index] <= array2[array2_index]:
             result.append(array1[array1_index])
             array1_index += 1
-        elif array1[array1_index] > array2[array2_index]:
+        else:
             result.append(array2[array2_index])
             array2_index += 1
 
