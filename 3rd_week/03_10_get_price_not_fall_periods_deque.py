@@ -1,5 +1,6 @@
 # queue로 풀어보기
 
+# 반복문, queue 둘 다 시간 복잡도 O(N^2)
 prices = [1, 2, 3, 2, 3]
 
 from collections import deque
