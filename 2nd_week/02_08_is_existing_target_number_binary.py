@@ -4,7 +4,7 @@ finding_numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
 
 def is_existing_target_number_binary(target, array):
     current_min = 0  # 최소값
-    current_max = len(array) - 1 # 최대값(배열의 맨 끝 번째 값이므로)  -- 인덱스 형태로 저장
+    current_max = len(array) - 1 # 최대값(배열의 맨 끝 번째 값이므로) -- 인덱스 형태로 저장
     current_guess = (current_min + current_max) // 2 # 이번에 탐색하는 값, 즉 추측하는 값
 
     find_count = 0

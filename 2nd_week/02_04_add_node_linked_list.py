@@ -35,7 +35,7 @@ class LinkedList:
         if index == 0:
             new_node.next = self.head  # 먼저 기존 헤드를 바라보게 만들어야 함
             self.head = new_node  # 새로운 헤드로 임명됨
-            return
+            return # 이걸 안 쓰면 아래 코드들이 실행돼서 꼬임.
 
         # get_node 함수를 이용하면 된다
         prev_node = self.get_node(index-1)
@@ -43,6 +43,7 @@ class LinkedList:
 
         prev_node.next = new_node
         new_node.next = next_node
+
 
 
 linked_list = LinkedList(5)

@@ -21,3 +21,4 @@ def is_palindrome2(string):
     return True
 
 print(is_palindrome2(input))
+
