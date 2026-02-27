@@ -9,7 +9,7 @@ def get_receiver_top_orders(heights):
         for j in range(i - 1, -1, -1):
             if heights[i] <= heights[j]:
                 answer[i] = j + 1
-                break
+                break # 가장 먼저 만나는 탑이 정답이기 때문에 break 걸어서 멈춰야 함. 아니면 덮어씌우기가 됨
 
     return answer
 
