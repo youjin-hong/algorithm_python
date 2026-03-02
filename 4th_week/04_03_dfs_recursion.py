@@ -22,11 +22,7 @@ def dfs_recursion(adjacent_graph, cur_node, visited_array):
     for adjacent_node in adjacent_graph[cur_node]:
         if adjacent_node not in visited_array: # 방문하지 않았다면
             dfs_recursion(adjacent_graph, adjacent_node, visited_array)
-            # 깊이가 수백만이다 하면 재귀함수를 이용해 dfs를 쓰는 것은 옳지 않다. recursion 에러를 맞닥뜨릴 수 있음
-
-
-    return
-
+            # 깊이가 수백만이다 하면 재귀함수를 이용해 dfs를 쓰는 것은 옳지 않다. recursion 에러를 맞닥뜨릴 수 있
 
 dfs_recursion(graph, 1, visited)  # 1 이 시작노드입니다!
 print(visited)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 이 출력되어야 합니다!
