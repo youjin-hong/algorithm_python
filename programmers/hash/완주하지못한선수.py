@@ -1,18 +1,18 @@
 # 내 풀이
 def solution(participant, completion):
-    dict = {}
+    participant_dict = dict()
 
-    for name in participant:
-        if name in dict:
-            dict[name] += 1
+    for person in participant:
+        if person in participant_dict:
+            participant_dict[person] += 1
         else:
-            dict[name] = 1
+            participant_dict[person] = 1
 
-    for name in completion:
-        if name in dict:
-            dict[name] -= 1
+    for person in completion:
+        if person in participant_dict:
+            participant_dict[person] -= 1
 
-    for k, v in dict.items():
+    for k, v in participant_dict.items():
         if v != 0:
             return k
 
