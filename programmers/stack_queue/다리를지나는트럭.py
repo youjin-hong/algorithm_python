@@ -21,3 +21,31 @@ def solution(bridge_length, weight, truck_weights):
                 passing.append(0)
 
     return time
+
+# 두 번째 내 풀이
+from collections import deque
+
+
+def solution(bridge_length, weight, truck_weights):
+    times = 0
+    pending = deque(truck_weights)
+    crossing = deque([0] * bridge_length)
+    bridge_weight = 0
+
+    for truck in crossing:
+        bridge_weight += truck
+
+    while crossing:
+        times += 1
+        out = crossing.popleft()
+        bridge_weight -= out
+
+        if pending:
+            if bridge_weight + pending[0] <= weight:
+                curr_truck = pending.popleft()
+                crossing.append(curr_truck)
+                bridge_weight += curr_truck
+            else:
+                crossing.append(0)
+
+    return times
