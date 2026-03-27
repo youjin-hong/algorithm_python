@@ -27,3 +27,23 @@ def solution(prices):
 
     return result
 
+# 세 번째 풀이(큐 활용 o)
+from collections import deque
+
+
+def solution(prices):
+    queue = deque(prices)
+    result = []
+
+    while queue:
+        curr_price = queue.popleft()
+        seconds = 0
+
+        for next_price in queue:
+            seconds += 1
+
+            if next_price < curr_price:
+                break
+
+        result.append(seconds)
+    return result
