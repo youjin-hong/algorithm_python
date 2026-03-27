@@ -25,3 +25,25 @@ def solution(priorities, location):
             if cur_process[1] == location:
                 return result
 
+
+# 두 번째 풀이
+from collections import deque
+
+
+def solution(priorities, location):
+    queue = deque((chr(pri + 65), i) for i, pri in enumerate(priorities))
+    count = 0
+
+    while queue:
+        curr_item = queue.popleft()
+
+        if any(curr_item[0] < item[0] for item in queue):
+            queue.append(curr_item)
+        else:
+            count += 1
+
+            if curr_item[1] == location:
+                return count
+
+
+
